@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE LIMES SYSTEM "limes.dtd">
+<LIMES>
+
+	<PREFIX>
+        <NAMESPACE>http://xmlns.com/foaf/0.1/</NAMESPACE>
+        <LABEL>foaf</LABEL>
+    </PREFIX>
+    <PREFIX>
+        <NAMESPACE>http://lod.openaire.eu/vocab/</NAMESPACE>
+        <LABEL>oav</LABEL>
+    </PREFIX>
+	<PREFIX>
+        <NAMESPACE>http://dbpedia.org/property/</NAMESPACE>
+        <LABEL>dbp</LABEL>
+    </PREFIX>
+	<PREFIX>
+        <NAMESPACE>http://www.w3.org/1999/02/22-rdf-syntax-ns#</NAMESPACE>
+        <LABEL>rdf</LABEL>
+    </PREFIX>
+		<PREFIX>
+        <NAMESPACE>http://www.w3.org/1999/02/22-rdf-syntax-ns#</NAMESPACE>
+        <LABEL>owl</LABEL>
+    </PREFIX>
+	<PREFIX>
+        <NAMESPACE>http://www.aktors.org/ontology/portal#</NAMESPACE>
+        <LABEL>akt</LABEL>
+    </PREFIX>
+	
+	<PREFIX>
+        <NAMESPACE>http://www.w3.org/2000/01/rdf-schema#</NAMESPACE>
+        <LABEL>rdfs</LABEL>
+    </PREFIX>
+	<PREFIX>
+        <NAMESPACE>http://eurocris.org/ontologies/cerif/1.3#</NAMESPACE>
+        <LABEL>cerif</LABEL>
+    </PREFIX>
+
+	
+    <SOURCE>
+        <ID>openaire</ID>
+        <ENDPOINT>http://lod.openaire.eu/sparql/</ENDPOINT>
+        <VAR>?x</VAR>
+        <PAGESIZE>20000</PAGESIZE>
+		<MAXOFFSET>5000</MAXOFFSET>
+        <RESTRICTION></RESTRICTION>
+		
+		<PROPERTY>oav:projectTitle</PROPERTY>
+    </SOURCE>
+	
+	
+	
+    <TARGET>
+	<ID>cordis</ID>
+	<ENDPOINT>http://cordis.rkbexplorer.com/sparql/</ENDPOINT>
+	<VAR>?y</VAR>
+	<PAGESIZE>10000</PAGESIZE>
+	<MAXOFFSET>5000</MAXOFFSET>
+	<RESTRICTION>?y a akt:Project</RESTRICTION>
+	
+	<PROPERTY>rdfs:label</PROPERTY>
+    </TARGET>
+
+	
+				<METRIC>Jaro(x.oav:projectTitle,y.rdfs:label)</METRIC>
+	
+	
+    <ACCEPTANCE>
+        <THRESHOLD>0.7</THRESHOLD>
+        <FILE>output1.nt</FILE>
+       <RELATION>owl:sameAs</RELATION>
+    </ACCEPTANCE>
+	
+    <REVIEW>
+        <THRESHOLD>0.5</THRESHOLD>
+        <FILE>output2.nt</FILE>
+        <RELATION>owl:sameAs</RELATION>
+    </REVIEW>
+	<GRANULARITY>2</GRANULARITY>
+
+    <OUTPUT>N3</OUTPUT>
+</LIMES>

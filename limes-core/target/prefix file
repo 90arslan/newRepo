@@ -1,0 +1,55 @@
+	<PREFIX>
+        <NAMESPACE>http://xmlns.com/foaf/0.1/</NAMESPACE>
+        <LABEL>foaf</LABEL>
+    </PREFIX>
+    
+	<PREFIX>
+        <NAMESPACE>http://lod.openaire.eu/vocab/</NAMESPACE>
+        <LABEL>oav</LABEL>
+    </PREFIX>
+
+	<PREFIX>
+        <NAMESPACE>http://dbpedia.org/property/</NAMESPACE>
+        <LABEL>dbp</LABEL>
+    </PREFIX>
+	
+	<PREFIX>
+        <NAMESPACE>http://www.w3.org/1999/02/22-rdf-syntax-ns#</NAMESPACE>
+        <LABEL>rdf</LABEL>
+    </PREFIX>
+	       
+	<PREFIX>
+        <NAMESPACE>http://www.w3.org/2000/01/rdf-schema#</NAMESPACE>
+        <LABEL>rdfs</LABEL>
+    </PREFIX>
+
+	<PREFIX>
+        <NAMESPACE>http://dbpedia.org/ontology/</NAMESPACE>
+        <LABEL>dbo</LABEL>
+    </PREFIX>
+	    
+	<PREFIX>
+        <NAMESPACE>http://eurocris.org/ontologies/cerif/1.3# </NAMESPACE>
+        <LABEL>cerif</LABEL>
+    </PREFIX>
+	 
+	 <PREFIX>
+        <NAMESPACE>http://www.aktors.org/ontology/portal#</NAMESPACE>
+        <LABEL>akt</LABEL>
+    </PREFIX>
+	 
+	
+	<PREFIX>
+        <NAMESPACE>http://www.aktors.org/ontology/support#</NAMESPACE>
+        <LABEL>akts</LABEL>
+    </PREFIX>
+	
+	<PREFIX>
+        <NAMESPACE>http://www.w3.org/2002/07/owl#</NAMESPACE>
+        <LABEL>owl</LABEL>
+    </PREFIX>
+	
+	<PREFIX>
+        <NAMESPACE>http://cordis.rkbexplorer.com/id/</NAMESPACE>
+        <LABEL>id</LABEL>
+    </PREFIX>
